@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorPrimary"
     >
 
     <ScrollView
@@ -30,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="FORM LOGIN"
-                android:textColor="@color/colorAccent"
+                android:textColor="#fff"
                 android:textAlignment="center"
                 android:textSize="20dp" />
 
@@ -42,7 +43,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Username"
-                android:textColor="#008477"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -63,7 +64,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Password"
-                android:textColor="#008477"
+                android:textColor="#fff"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -86,10 +87,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_gravity="center"
-                android:backgroundTint="#008477"
                 android:padding="20sp"
                 android:text="login"
-                android:textColor="#ffffff"
+                android:textColor="#000000"
+                android:background="#FBD227"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -101,10 +102,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:backgroundTint="#008477"
+                android:textColor="#000000"
+                android:background="#FBD227"
                 android:padding="20sp"
                 android:text="Batal"
-                android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
