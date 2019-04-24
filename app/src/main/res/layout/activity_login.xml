@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/colorPrimary"
-    >
+    android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="196dp"
@@ -31,8 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="FORM LOGIN"
-                android:textColor="#fff"
                 android:textAlignment="center"
+                android:textColor="#fff"
                 android:textSize="20dp" />
 
             <TextView
@@ -54,7 +52,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:hint="Masukan Username"
-                android:textColor="@color/black_overlay"
+                android:textColor="#fff"
                 android:textColorHint="#BDBDBD" />
 
             <TextView
@@ -76,21 +74,21 @@
                 android:layout_marginTop="10dp"
                 android:hint="Masukkan Password"
                 android:inputType="textPassword"
-                android:textColor="@color/black_overlay"
+                android:textColor="#fff"
                 android:textColorHint="#BDBDBD" />
 
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:layout_gravity="center"
+                android:background="#FBD227"
                 android:padding="20sp"
                 android:text="login"
                 android:textColor="#000000"
-                android:background="#FBD227"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -102,10 +100,10 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:textColor="#000000"
                 android:background="#FBD227"
                 android:padding="20sp"
                 android:text="Batal"
+                android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 setLogin();            }
         });
-//
+
 //        btnCancel.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
