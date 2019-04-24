@@ -7,12 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Space;
+
+import com.example.login.activity.MainActivityScore;
 
 import com.example.login.Manager.PrefManager;
 
 public class MainActivity extends AppCompatActivity {
-Button btnLogout;
+Button btnLogout,btnScore;
 Context context;
 /*
     btnLogout = findViewbyId("btnLogout");*/
@@ -24,6 +25,7 @@ Context context;
 
         context = this;
         btnLogout = findViewById(R.id.btnLogout);
+        btnScore = findViewById(R.id.btnScore);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +34,14 @@ Context context;
                 prefManager.remove("TOKEN");
                 Intent intent = new Intent(context, SplashscreenActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btnScore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentScore = new Intent(context, MainActivityScore.class);
+                startActivity(intentScore);
             }
         });
 

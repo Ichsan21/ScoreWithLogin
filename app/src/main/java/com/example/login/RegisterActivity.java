@@ -16,15 +16,14 @@ import android.widget.EditText;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.login.httpclient.ApiClient;
-import com.example.login.httpclient.ApiInterfance;
+import com.example.login.httpclient.ApiInterface;
 import com.example.login.model.ResponseRegister;
-import com.example.login.model.Success;
 
 public class RegisterActivity extends AppCompatActivity {
 
     EditText etName, etEmail, etUsername, etPaswword,etCPassword;
     Button bRegister,bCancel;
-    ApiInterfance apiInterfance;
+    ApiInterface apiInterface;
     Context context;
 
     @Override
@@ -43,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
         bRegister = findViewById(R.id.btnRegister);
         bCancel = findViewById(R.id.btnCancel);
 
-        apiInterfance = ApiClient.getApiClient().create(ApiInterfance.class);
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     public  void setRegister(){
 
-        Call<ResponseRegister> api=apiInterfance.setRegister(
+        Call<ResponseRegister> api= apiInterface.setRegister(
                 etName.getText().toString(),
                 etEmail.getText().toString(),
                 etUsername.getText().toString(),

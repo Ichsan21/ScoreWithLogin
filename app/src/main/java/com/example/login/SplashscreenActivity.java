@@ -5,7 +5,6 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +14,7 @@ import android.view.View;
 
 import com.example.login.Manager.PrefManager;
 import com.example.login.httpclient.ApiClient;
-import com.example.login.httpclient.ApiInterfance;
+import com.example.login.httpclient.ApiInterface;
 import com.example.login.model2.ResponseDetail;
 
 import retrofit2.Call;
@@ -28,7 +27,7 @@ import retrofit2.Response;
  */
 public class SplashscreenActivity extends AppCompatActivity {
     Context context;
-    ApiInterfance apiInterfance;
+    ApiInterface apiInterface;
 
     /**
      * Whether or not the system UI should be auto-hidden after
@@ -106,7 +105,7 @@ public class SplashscreenActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_splashscreen);
         context=this;
-        apiInterfance= ApiClient.getApiClient().create(ApiInterfance.class);
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         mVisible = true;
         mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
@@ -143,7 +142,7 @@ public class SplashscreenActivity extends AppCompatActivity {
     }
 
     public void testToken(String token){
-        Call<ResponseDetail> api=apiInterfance.getDetails(token);
+        Call<ResponseDetail> api= apiInterface.getDetails(token);
         api.enqueue(new Callback<ResponseDetail>() {
             @Override
             public void onResponse(Call<ResponseDetail> call, Response<ResponseDetail> response) {

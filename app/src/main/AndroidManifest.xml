@@ -27,6 +27,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".WelcomeActivity">
         </activity>
+        <activity android:name=".activity.DetailLeagueActivity"/>
+        <activity android:name=".activity.MainActivityScore"/>
     </application>
 
 </manifest>

@@ -15,15 +15,14 @@ import android.widget.EditText;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.login.Manager.PrefManager;
 import com.example.login.httpclient.ApiClient;
-import com.example.login.httpclient.ApiInterfance;
+import com.example.login.httpclient.ApiInterface;
 import com.example.login.model.ResponseLogin;
-import com.example.login.model.ResponseRegister;
 
 public class LoginActivity extends AppCompatActivity {
 
     EditText etUser, etPass;
     Button bLogin,btnCancel;
-    ApiInterfance apiInterfance;
+    ApiInterface apiInterface;
     Context context;
 
     @Override
@@ -39,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         bLogin = findViewById(R.id.btnLogin);
         btnCancel = findViewById(R.id.btnCancel);
 
-        apiInterfance = ApiClient.getApiClient().create(ApiInterfance.class);
+        apiInterface = ApiClient.getApiClient().create(ApiInterface.class);
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public  void setLogin(){
 
-        Call<ResponseLogin> api=apiInterfance.setLogin(
+        Call<ResponseLogin> api= apiInterface.setLogin(
                 etUser.getText().toString(),
                 etPass.getText().toString()
         );

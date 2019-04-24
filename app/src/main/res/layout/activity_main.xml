@@ -27,12 +27,21 @@
         android:textSize="30dp"
         />
 
+    <Button
+        android:id="@+id/btnScore"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#FDD327"
+        android:layout_marginTop="10dp"
+        android:text="Lihat Score" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Untuk logout silahkan tekan tombol di bawah"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:textAlignment="center"
         android:textColor="#fff"
         />
